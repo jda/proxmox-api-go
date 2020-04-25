@@ -65,9 +65,9 @@ func ParamsToBody(params map[string]interface{}) (body []byte) {
 		default:
 			v = fmt.Sprintf("%v", intrV)
 		}
-        if v != "" {
-            vals.Set(k, v)
-        }
+		if v != "" {
+			vals.Set(k, v)
+		}
 	}
 	body = bytes.NewBufferString(vals.Encode()).Bytes()
 	return
